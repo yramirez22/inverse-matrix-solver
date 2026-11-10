@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Printing Shop Cost Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1> 🖨️ School Printing Shop Cost </h1>
+
+    <p class="subtitle">
+        Solve the prices of printing services using the
+        System of Linear Equations with
+        Inverse Matrix Method (X = A⁻¹B)
+    </p>
+
+    <div class="info-box">
+        <h3>Variables</h3>
+
+        <p><strong>x₁</strong> = Price of Black & White Print</p>
+        <p><strong>x₂</strong> = Price of Colored Print</p>
+        <p><strong>x₃</strong> = Price of Photocopy</p>
+
+        <h3>Sample Equations</h3>
+
+        <p>Student A: 10x₁ + 2x₂ + 5x₃ = 115</p>
+        <p>Student B: 8x₁ + 5x₂ + 3x₃ = 134</p>
+        <p>Student C: 12x₁ + x₂ + 8x₃ = 102</p>
+    </div>
+
+    <h2>Coefficient Matrix A</h2>
+
+    <div class="matrix-labels">
+        <div>X₁</div>
+        <div>X₂</div>
+        <div>X₃</div>
+    </div>
+
+    <div class="matrix">
+
+        <input type="number" id="a00" placeholder="a11">
+        <input type="number" id="a01" placeholder="a12">
+        <input type="number" id="a02" placeholder="a13">
+
+        <input type="number" id="a10" placeholder="a21">
+        <input type="number" id="a11" placeholder="a22">
+        <input type="number" id="a12" placeholder="a23">
+
+        <input type="number" id="a20" placeholder="a31">
+        <input type="number" id="a21" placeholder="a32">
+        <input type="number" id="a22" placeholder="a33">
+
+    </div>
+
+    <h2>Vector B (Student Totals)</h2>
+
+    <div class="vector">
+
+        <input type="number"
+            id="b0"
+            placeholder="b1 (Student A Total    )">
+
+        <input type="number"
+            id="b1"
+            placeholder="b2 (Student B Total)">
+
+        <input type="number"
+            id="b2"
+            placeholder="b3 (Student C Total)">
+
+    </div>
+
+    <div class="buttons">
+
+        <button onclick="solveSystem()">Solve</button>
+
+        <button onclick="loadExample()">Load Example</button>
+
+        <button onclick="resetForm()">Reset</button>
+
+        <button onclick="printResults()">Print Results</button>
+
+    </div>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
